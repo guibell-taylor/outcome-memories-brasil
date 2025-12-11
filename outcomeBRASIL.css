@@ -1,0 +1,541 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #1c0000;
+    color: #f3e4e4;
+    line-height: 1.6;
+}
+
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(to bottom, #4d0000, transparent);
+}
+
+header img {
+    width: 800px;   
+    max-width: 100%;
+}
+
+p{
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    margin-left: 80px;
+    margin-right: 80px;
+    color: #ffdbdb;
+    
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-top: 10px;
+    color: #ffb5b5;
+    text-shadow: 0 0 8px #000;
+}
+
+
+
+main p {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.05rem;
+    color: #f3dada;
+}
+
+.nav-container {
+    border: 2px solid #4b0000;
+    padding: 24px;
+    border-radius: 12px;
+    background-color: rgba(15, 0, 0, 0.85);
+    width: 100%;
+    max-width: 980px;   
+    margin: 30px auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: auto;
+    gap: 28px 24px;
+    align-items: center;
+    justify-items: center;
+}
+
+
+nav li {
+    width: 100%;
+    text-align: center;
+}
+
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffdede;
+    font-weight: 700;
+    font-size: 0.98rem;
+    transition: transform 0.22s ease;
+}
+
+
+nav a img {
+    display: block;            
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 6px;
+    transition: transform 0.22s ease, filter 0.22s ease;
+    background-color: rgba(0,0,0,0.0); 
+}
+
+nav a:hover img {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 16px #ff2b2b) saturate(1.2);
+}
+
+
+nav a:hover {
+    transform: translateY(-6px);
+    color: #ffffff;
+}
+
+nav a .label {
+    display: block;
+    margin-top: 2px;
+    color: #ffdede;
+}
+
+@media (max-width: 680px) {
+    nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    nav a img {
+        width: 94px;
+        height: 94px;
+    }
+}
+
+.tabelamemories {
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 30px 20px;
+    background: #300000;
+    text-align: center;
+    color: #e6caca;
+    font-size: 0.95rem;
+    border-top: 2px solid #4b0000;
+}
+
+footer h2 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #ffbebe;
+}
+
+footer address p {
+    margin: 4px 0;
+}
+
+footer address {
+    font-style: normal;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+/* a pagina dos killers. killer page. kill . killer . killers  */
+
+.killerpage {
+  background: rgba(10, 10, 10, 0.55);
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #770000;
+  backdrop-filter: blur(5px);
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.killerpage ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+
+
+.killerpage li a {
+  color: #ffdede;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+
+
+
+.killerpage li:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.3) drop-shadow(0 0 6px red);
+}
+
+
+.killerpage li:hover a {
+  color: #ffb4b4;
+}
+
+
+/* sobreviventes . suv. suvs .*/ 
+
+.suvpage {
+  background: rgba(10, 10, 10, 0.55);
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #770000;
+  backdrop-filter: blur(5px);
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.suvpage ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+
+
+.suvpage li a {
+  color: #ffdede;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+
+
+
+.suvpage li:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.3) drop-shadow(0 0 6px red);
+}
+
+.suvpage li p,
+.suvpage li .quote {
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.suvpage li a {
+  white-space: normal;
+  word-break: normal;
+}
+
+.suvpage ul {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+
+.suvpage li:hover a {
+  color: #ffb4b4;
+}
+
+.suvpage ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  gap: 12px;                
+  padding: 8px 6px;
+}
+
+
+.suvpage ul {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+
+.suvpage li .avatar {
+  display: block;
+  width: 160px;            
+  height: auto;
+  transform-origin: center;
+  margin-bottom: 0;
+}
+
+
+.suvpage li .quote,
+.suvpage li p,
+.suvpage li a.quote {
+  max-width: 200px;        
+  text-align: center;      
+  margin: 0;
+  margin-top: 6px;         
+  color: #ffdede;
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  white-space: normal;     
+  word-break: normal;
+  overflow-wrap: break-word; 
+  hyphens: auto;          
+}
+
+
+.suvpage li a {
+  display: inline-block;   
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.notready {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.greenring {
+    display: block;
+    margin: 0 auto;
+    width:150;
+    height:150;
+}
+
+/* ==================================== */
+/* Estilos para a Seção de Mapas (#trials) */
+/* ==================================== */
+
+#trials {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(10, 0, 0, 0.7); /* Fundo semi-transparente para destaque */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); /* Sombra vermelha sutil */
+    border: 1px solid #770000;
+}
+
+#trials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #c9ffb5;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ff0d;
+    border-bottom: 2px solid #5a0000;
+    padding-bottom: 10px;
+}
+
+/* Redefine o estilo padrão do 'p' para a seção principal, para que não herde o margin-left/right de 80px */
+#trials > p,
+#trials > ul + p { /* Aplica-se aos parágrafos fora da lista de cenários */
+    max-width: 900px;
+    margin: 15px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Estilo para a imagem do anel (GIF) */
+.greenring {
+    display: block;
+    margin: 20px auto 40px;
+    width: 180px; /* Aumentado ligeiramente para melhor visualização */
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para a lista de cenários */
+#trials ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo em grid */
+    gap: 30px;
+}
+
+#trials li {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro para cada cenário */
+    border: 1px solid #4b0000;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center; /* Centraliza o texto e a imagem dentro do item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#trials li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5); /* Efeito de levitação e sombra ao passar o mouse */
+    background-color: rgba(20, 0, 0, 0.6);
+}
+
+/* Estilo para o separador horizontal dentro do LI (já existe no HTML) */
+#trials li > hr {
+    border: none;
+    height: 1px;
+    background-color: #5a0000;
+    margin: 10px 0;
+}
+
+/* Estilo para as imagens dos cenários */
+#trials li img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto 15px; /* Centraliza a imagem e adiciona margem abaixo */
+    border-radius: 6px;
+    border: 2px solid #5a0000;
+    object-fit: cover;
+    transition: border-color 0.3s ease;
+}
+
+#trials li:hover img {
+    border-color: #ff6f6f;
+}
+
+/* Citação (cite) */
+#trials li cite {
+    display: block;
+    font-style: italic;
+    color: #ffd700; /* Dourado/Amarelo para destaque */
+    margin: 10px 0 15px;
+    font-size: 1.05rem;
+    padding: 5px 10px;
+    border-left: 3px solid #ffd700;
+}
+
+/* Parágrafos dentro dos cenários */
+#trials li p {
+    text-align: justify; /* Justifica o texto para melhor leitura */
+    margin: 10px 0;
+    padding: 0 10px;
+    color: #f3e4e4;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Título de Mecânicas (h4) */
+#trials li h4 {
+    color: #ff5555;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Lista de mecânicas dentro do cenário */
+#trials li ul {
+    list-style: disc;
+    text-align: left;
+    margin: 15px 0 0 20px;
+    padding-left: 10px;
+    grid-template-columns: 1fr; /* Garante que a sub-lista não use o layout de grid da lista principal */
+    gap: 5px;
+}
+
+#trials li ul li {
+    background-color: transparent; /* Remove o fundo do item da sub-lista */
+    border: none;
+    box-shadow: none;
+    padding: 5px 0;
+    text-align: left;
+    transform: none;
+}
+
+#trials li ul li:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #ffaaaa;
+}
+
+/* Destaque para o item importante no Not Perfect */
+#trials li ul li strong {
+    color: #ff0000;
+}
+
+/* Ajuste para o parágrafo de exemplo (dentro de #trials, mas fora da lista) */
+#trials > .greenring + p + ul + p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.trialbody{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-image: linear-gradient(to bottom, #012d04, #000000 , #690505); 
+    color: #f3e4e4;
+    line-height: 1.6;
+}
