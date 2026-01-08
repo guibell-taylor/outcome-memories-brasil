@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Outcome Memories</title>
+
+    <link rel="icon" type="image/png" href="assets/Green-removebg-preview.png">
+    <link rel="stylesheet" href="lojaOM.css">
+</head>
+
+<body>
+
+    <section>
+
+        <div class="content">
+
+            <h1 id="exename">LOJA OUTCOME MEMORIES</h1>
+
+            <!-- BOTÃO DA IMAGEM -->
+            <div class="main-image-wrapper">
+                <button class="cursed-button" id="audioButton" aria-label="Shop Audio Button">
+                    <img class="main-image" src="assets/THATwolf.png" alt="Faarschnardd" width="420">
+                </button>
+            </div>
+
+            <audio id="audioPlayer"></audio>
+
+            <p><cite>"BuY MY iTaNS..."</cite></p>
+
+        </div>
+    </section>
+
+    <section>
+
+        <h2>Visão Geral</h2>
+        <p>
+            A Shop é um dos sistemas centrais de Outcome Memories, permitindo que os jogadores gastem Rings
+            para desbloquear Executioners, Emotes e diversas opções cosméticas.
+        </p>
+
+        <h2>Administrador</h2>
+        <p>
+            A Shop é administrada por Faarschnardd (anteriormente conhecido como Tarven), uma figura excêntrica
+            que supervisiona todas as transações realizadas no local.
+        </p>
+
+        <h2>Carrascos</h2>
+        <p>
+            Carrascos são os principais antagonistas de Outcome Memories e representam os itens mais
+            importantes disponíveis na Shop.
+        </p>
+
+        <h2>Variants</h2>
+        <p>Versões alternativas dos Carrascos. <br>
+            Embora Variants funcionem, em essência, como skins, elas vão muito além de simples mudanças visuais ou
+            recolors. No caso dos Carrascos, as Variants podem, e até o momento todas o fazem: <br>
+            <br>
+            ->Alterar completamente as animações do Carrasco. <br>
+            <br>
+            ->Substituir completamente sua trilha sonora. <br>
+            <br>
+            ->Oferecer vantagens ou desvantagens indiretas, devido a mudanças no tamanho ou na silhueta do visual. <br>
+            <br>
+            ->Trocar por completo todas as voice lines do personagem. <br>
+            <br>
+            Assim, apesar de Variants serem classificadas principalmente como alterações visuais, é inegável que, na
+            prática, elas se comportam como personagens quase inteiramente diferentes. Ainda assim, todas compartilham o
+            mesmo moveset base do Carrasco ao qual pertencem.
+        </p>
+
+        <h2>Emotes</h2>
+
+        <img src="https://static.wikia.nocookie.net/the-unofficial-outcome-memories/images/b/b1/EggmanBoohoo.gif/revision/latest/scale-to-width-down/185?cb=20251214094442"
+            alt="eggmanemote">
+        <img src="https://static.wikia.nocookie.net/the-unofficial-outcome-memories/images/d/d4/SonicTickTock.gif/revision/latest/scale-to-width-down/185?cb=20251214114823"
+            alt="sonicemote">
+        <img src="https://static.wikia.nocookie.net/the-unofficial-outcome-memories/images/1/1f/KolossosMissMe.gif/revision/latest/scale-to-width-down/185?cb=20251214134202"
+            alt="kollososemote">
+        <img src="https://static.wikia.nocookie.net/the-unofficial-outcome-memories/images/6/67/TripwireSitting.gif/revision/latest/scale-to-width-down/185?cb=20251214134210"
+            alt="tripwireemote">
+        <p> Animações utilizadas durante as partidas.
+            Cada jogador pode levar para a partida até 4 emotes. Tanto Carrascos quanto Sobreviventes possuem emotes
+            próprios, sendo que cada personagem conta com emotes exclusivos. Esses emotes podem variar entre ações
+            simples, gestos expressivos ou até danças completas, servindo tanto para comunicação quanto para provocação
+            ou estilo durante o jogo.</p>
+
+        <h2>Cosméticos</h2>
+        <p>exclusivo para os sobreviventes. Alterações visuais que permitem personalizar personagens, sem oferecer
+            vantagens ou desvantagens durante a jogabilidade.</p>
+
+        <div class="footer-curiosidades">
+            <h2>CURIOSIDADES</h2>
+            <ul>
+                <li>É possível alterar a música da Shop interagindo com o rádio.</li>
+                <li>Existe um bug conhecido que pode causar falhas na interface.</li>
+                <li>O problema ocorre com maior frequência em dispositivos móveis.</li>
+                <li>Tarven encontra-se atualmente ausente devido à saída de seu dublador.</li>
+            </ul>
+        </div>
+
+        <div class="radio-container" id="radioButton">
+            <img src="assets/littleradio.webp" alt="Radio" class="radio-icon">
+        </div>
+
+        <audio id="radioAudio"></audio>
+
+
+    </section>
+
+    <script>
+        const audioFiles = [
+            "thatshopguysthing/CASH._MONEY._BLING_BLING.mp3",
+            "thatshopguysthing/Evillaughter.mp3",
+            "thatshopguysthing/Hesaidsomeshitidk.mp3",
+            "thatshopguysthing/Bought.mp3"
+        ];
+
+        const audioButton = document.getElementById("audioButton");
+        const audioPlayer = document.getElementById("audioPlayer");
+
+        function playRandomAudio() {
+            const randomIndex = Math.floor(Math.random() * audioFiles.length);
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            audioPlayer.src = audioFiles[randomIndex];
+            audioPlayer.play().catch(() => { });
+        }
+
+        audioButton.addEventListener("click", playRandomAudio);
+
+        audioButton.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                playRandomAudio();
+            }
+        });
+    </script>
+
+    <script>
+        const radioAudios = [
+            "thatshopguysthing/ArcticTheme.mp3",
+            "thatshopguysthing/ComeBackAgain.mp3",
+            "thatshopguysthing/FamiliarShopSong.mp3",
+            "thatshopguysthing/OnceUpon.mp3",
+            "thatshopguysthing/Newend.mp3"
+        ];
+
+        const radioButton = document.getElementById("radioButton");
+        const radioPlayer = document.getElementById("radioAudio");
+
+        let isPlaying = false;
+
+        radioButton.addEventListener("click", () => {
+            if (!isPlaying) {
+                const randomIndex = Math.floor(Math.random() * radioAudios.length);
+                radioPlayer.src = radioAudios[randomIndex];
+                radioPlayer.play()
+                    .then(() => isPlaying = true)
+                    .catch(err => console.error(err));
+            } else {
+                radioPlayer.pause();
+                radioPlayer.currentTime = 0;
+                isPlaying = false;
+            }
+        });
+    </script>
+  <footer class="rodape">
+
+    Disclaimer: This website is a personal hobby project, created by a fan for fans. It is not affiliated with SEGA,
+    Sonic Team, or the Outcome Memories development team.
+    <br>
+    Isenção de Responsabilidade: Este site é um projeto pessoal feito por hobby, criado por um fã para fãs. Não possui
+    qualquer vínculo ou afiliação com a SEGA, a Sonic Team ou a equipe de desenvolvimento de Outcome Memories.
+
+    <br>
+
+<hr>
+
+    <h2>Contato</h2>
+
+    <address>
+
+      x(twitter)/youtube/instagram: guibell taylor <br>
+
+      Email: guibelljogos@gmail.com
+
+    </address>
+
+    <br>
+
+    © 2025 Guibell Taylor. All rights reserved to their respective owners.
+
+  </footer>
+
+</body>
+
+</html>

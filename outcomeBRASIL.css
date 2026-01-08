@@ -154,6 +154,14 @@ nav a .label {
     pointer-events: none;
 }
 
+  .dica {
+            background: #0d1117;
+            padding: 15px;
+            border-left: 5px solid #388bfd;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
 
 footer {
     margin-top: 40px;
@@ -387,10 +395,11 @@ footer address {
 
 #trials h2 {
     text-align: center;
-    font-size: 2.5rem;
-    color: #c9ffb5;
+    font-size: 2.2rem;
+    color: #ffb5b5;
     margin-bottom: 30px;
-    text-shadow: 0 0 10px #00ff0d;
+    margin-top: 40px;
+    text-shadow: 0 0 8px #000;
     border-bottom: 2px solid #5a0000;
     padding-bottom: 10px;
 }
@@ -486,6 +495,15 @@ footer address {
     line-height: 1.5;
 }
 
+/* Título dos Mapas (h3) */
+#trials li h3 {
+    color: #ffb5b5;
+    font-size: 1.8rem;
+    margin: 15px 0 10px;
+    text-shadow: 0 0 8px #000;
+    font-weight: 600;
+}
+
 /* Título de Mecânicas (h4) */
 #trials li h4 {
     color: #ff5555;
@@ -529,13 +547,4 @@ footer address {
 #trials > .greenring + p + ul + p {
     margin-top: 25px;
     margin-bottom: 25px;
-}
-
-.trialbody{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-    background-image: linear-gradient(to bottom, #012d04, #000000 , #690505); 
-    color: #f3e4e4;
-    line-height: 1.6;
 }
