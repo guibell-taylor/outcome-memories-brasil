@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    
+    background-image: url("https://i.ytimg.com/vi/IDE-0AfzdmI/sddefault.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    color: #f2f2f2;
+    line-height: 1.65;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    z-index: -1;
+}
+
+
+
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 32px;
+    box-shadow:
+        0 0 25px rgba(118, 1, 56, 0.517),
+        inset 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+ul  {
+    margin-bottom: 1.4rem;
+    color: #d0d0d0;
+    font-size: 1.05rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 25px;
+    border-left: 4px solid #8a0364;
+}
+
+#hero-name {
+    display: flex;
+    justify-content: center;
+     filter: drop-shadow(0 0 10px #8a0364);
+}
+
+.main-image-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.main-image {
+    filter: contrast(1.05) brightness(0.95);
+}
+
+p {
+    margin: 1.4rem 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 4px solid #8a0364;
+    color: #d0d0d0;
+}
+
+section {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.radio-container {
+    width: 140px;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.radio-icon {
+    width: 100%;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
